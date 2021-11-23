@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/*
+ * @Author: kingford
+ * @Date: 2021-11-23 14:38:23
+ * @LastEditTime: 2021-11-23 19:09:22
+ */
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
+import Home from "./pages/home";
+import List from "./pages/list";
+
+const BASE_NAME = window.__POWERED_BY_QIANKUN__ ? "/react" : "/";
+const App = () => {
+  // 设置路由命名空间
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter basename={BASE_NAME}>
+      <Routes>
+        <Route path="/" element={<Home></Home>} />
+        <Route path="/list" element={<List></List>} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

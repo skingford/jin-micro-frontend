@@ -1,7 +1,7 @@
 /*
  * @Author: kingford
  * @Date: 2021-11-23 14:42:35
- * @LastEditTime: 2021-11-23 14:56:18
+ * @LastEditTime: 2021-11-23 20:47:06
  */
 // 一个进度条插件
 
@@ -22,8 +22,6 @@ import apps from "./apps";
 registerMicroApps(apps, {
   // qiankun 生命周期钩子 - 加载前
   beforeLoad: (app: any) => {
-    // 加载子应用前，加载进度条
-
     console.log("before load", app.name);
     return Promise.resolve();
   },
@@ -40,7 +38,7 @@ registerMicroApps(apps, {
  * 添加全局的未捕获异常处理器
  */
 addGlobalUncaughtErrorHandler((event: Event | string) => {
-  console.error(event);
+  console.error("addGlobalUncaughtErrorHandler.event:", event);
   const { message: msg } = event as any;
   // 加载失败时提示
   if (msg && msg.includes("died in status LOADING_SOURCE_CODE")) {
