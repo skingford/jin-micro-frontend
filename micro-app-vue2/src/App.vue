@@ -1,8 +1,13 @@
+<!--
+ * @Author: kingford
+ * @Date: 2021-11-23 14:56:41
+ * @LastEditTime: 2021-11-23 16:32:47
+-->
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">Micro Vue2 Home</router-link> |
+      <router-link to="/about">Micro Vue2 About</router-link>
     </div>
     <router-view />
   </div>

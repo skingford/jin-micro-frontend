@@ -1,3 +1,8 @@
+/*
+ * @Author: kingford
+ * @Date: 2021-11-23 14:34:34
+ * @LastEditTime: 2021-11-23 16:26:57
+ */
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import Home from "../views/Home.vue";
 
@@ -6,6 +11,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/",
     name: "Home",
     component: Home,
+  },
+  {
+    path: "/login",
+    name: "Login",
+    component: () => import("../views/Login.vue"),
   },
   {
     path: "/about",

@@ -1,9 +1,11 @@
+<!--
+ * @Author: kingford
+ * @Date: 2021-11-23 14:34:34
+ * @LastEditTime: 2021-11-23 16:31:05
+-->
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
   <router-view />
+  <div id="frame"></div>
 </template>
 
 <style>
