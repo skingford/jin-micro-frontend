@@ -1,7 +1,7 @@
 /*
  * @Author: kingford
  * @Date: 2021-11-23 14:38:23
- * @LastEditTime: 2021-11-23 20:44:16
+ * @LastEditTime: 2021-11-24 09:37:41
  */
 import React from "react";
 import ReactDOM from "react-dom";
@@ -58,12 +58,12 @@ export async function unmount(props: any) {
   );
 }
 
-// if (process.env.NODE_ENV === "development") {
-//   window["ReactMicroApp"] = {};
-//   window["ReactMicroApp"].bootstrap = bootstrap;
-//   window["ReactMicroApp"].mount = mount;
-//   window["ReactMicroApp"].unmount = unmount;
-// }
+if (process.env.NODE_ENV === "development") {
+  window["ReactMicroApp"] = {};
+  window["ReactMicroApp"].bootstrap = bootstrap;
+  window["ReactMicroApp"].mount = mount;
+  window["ReactMicroApp"].unmount = unmount;
+}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

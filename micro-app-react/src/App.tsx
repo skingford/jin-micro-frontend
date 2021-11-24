@@ -1,12 +1,12 @@
 /*
  * @Author: kingford
  * @Date: 2021-11-23 14:38:23
- * @LastEditTime: 2021-11-23 19:09:22
+ * @LastEditTime: 2021-11-24 09:36:13
  */
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Home from "./pages/home";
-import List from "./pages/list";
+import Home from "@/pages/home";
+import List from "@/pages/list";
 
 const BASE_NAME = window.__POWERED_BY_QIANKUN__ ? "/react" : "/";
 const App = () => {

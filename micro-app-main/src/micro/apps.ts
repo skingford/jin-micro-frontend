@@ -1,11 +1,11 @@
 /*
  * @Author: kingford
  * @Date: 2021-11-23 14:42:52
- * @LastEditTime: 2021-11-23 14:52:08
+ * @LastEditTime: 2021-11-23 20:55:17
  */
 import config from "@/config";
 
-console.log(config);
+console.log("app.config:", config);
 const { REACT_MICRO_APP, VUE_MICRO_APP } = config;
 
 const apps = [
