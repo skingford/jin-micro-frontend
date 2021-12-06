@@ -1,3 +1,8 @@
+/*
+ * @Author: kingford
+ * @Date: 2021-11-23 17:15:04
+ * @LastEditTime: 2021-12-06 15:25:35
+ */
 const path = require("path");
 
 module.exports = {
@@ -28,9 +33,9 @@ module.exports = {
         "Access-Control-Allow-Origin": "*",
       };
 
-      config.hot = false;
-      config.watchContentBase = false;
-      config.liveReload = false;
+      // config.hot = false;
+      // config.watchContentBase = false;
+      // config.liveReload = false;
 
       // 配置 history 模式
       config.historyApiFallback = true;
