@@ -1,7 +1,7 @@
 /*
  * @Author: kingford
  * @Date: 2021-11-23 14:34:34
- * @LastEditTime: 2021-11-23 15:47:39
+ * @LastEditTime: 2021-12-06 20:52:34
  */
 import { createApp } from "vue";
 import App from "./App.vue";
@@ -10,6 +10,9 @@ import router from "./router";
 import store from "./store";
 
 import startQiankun from "./micro";
+
+// 重命名vue
+console.log("window:", window);
 
 function bootstrap(): void {
   startQiankun();

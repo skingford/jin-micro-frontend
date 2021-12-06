@@ -1,7 +1,7 @@
 /*
  * @Author: kingford
  * @Date: 2021-12-06 16:47:05
- * @LastEditTime: 2021-12-06 16:53:55
+ * @LastEditTime: 2021-12-06 20:12:52
  */
 import { createApp } from "vue";
 import App from "./App.vue";
@@ -15,10 +15,9 @@ import "./public-path";
 
 const app = createApp(App);
 
-let router = null;
 function render(props: any) {
   const { container } = props;
-  router = createRouter({
+  const router = createRouter({
     history: createWebHistory(
       (window as any).__POWERED_BY_QIANKUN__ ? "/vue3" : "/"
     ),
@@ -58,5 +57,3 @@ export async function unmount() {
   console.log("vue3 unmount");
   app.unmount();
 }
-
-// createApp(App).use(store).use(router).mount("#app");

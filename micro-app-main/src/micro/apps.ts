@@ -1,7 +1,7 @@
 /*
  * @Author: kingford
  * @Date: 2021-11-23 14:42:52
- * @LastEditTime: 2021-12-06 19:45:23
+ * @LastEditTime: 2021-12-06 20:02:47
  */
 import config from "@/config";
 
@@ -19,25 +19,25 @@ const apps = [
   {
     name: "ReactMicroApp",
     entry: REACT_MICRO_APP,
-    container: "#frame",
+    container: "#micro-content",
     activeRule: "/react",
   },
   {
     name: "VueMicroApp",
     entry: VUE_MICRO_APP,
-    container: "#frame",
+    container: "#micro-content",
     activeRule: "/vue",
   },
   {
     name: "Vue3MicroApp",
     entry: VUE3_MICRO_APP,
-    container: "#frame",
+    container: "#micro-content",
     activeRule: "/vue3",
   },
   {
     name: "ViteVueMicroApp",
     entry: VITE_VUE_MICRO_APP,
-    container: "#frame",
+    container: "#micro-content",
     activeRule: "/vite-vue",
   },
 ];

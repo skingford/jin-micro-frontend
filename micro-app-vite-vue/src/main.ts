@@ -1,7 +1,7 @@
 /*
  * @Author: kingford
  * @Date: 2021-12-06 19:22:55
- * @LastEditTime: 2021-12-06 19:51:08
+ * @LastEditTime: 2021-12-06 20:12:15
  */
 import { createApp } from "vue";
 import App from "./App.vue";
@@ -14,7 +14,7 @@ import {
   qiankunWindow,
 } from "vite-plugin-qiankun/dist/helper";
 
-let app: any;
+const app = createApp(App);
 
 function render(props: any = {}) {
   const { container, routerBase = "/vite-vue" } = props;
@@ -28,8 +28,7 @@ function render(props: any = {}) {
     ),
   });
 
-  app = createApp(App);
-  app.use(router).mount(container || "#app");
+  app.use(router).mount(container ? container.querySelector("#app") : "#app");
 }
 
 console.log("vite micro qiankunWindow:", qiankunWindow);
@@ -50,7 +49,6 @@ if (qiankunWindow.__POWERED_BY_QIANKUN__) {
     unmount() {
       console.log("vite micro unmount");
       app.unmount();
-      app = null;
     },
   });
 }

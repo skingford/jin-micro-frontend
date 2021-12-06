@@ -1,7 +1,7 @@
 /*
  * @Author: kingford
  * @Date: 2021-11-23 14:34:34
- * @LastEditTime: 2021-12-06 15:19:16
+ * @LastEditTime: 2021-12-06 20:45:11
  */
 module.exports = {
   root: true,
@@ -21,6 +21,6 @@ module.exports = {
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "@typescript-eslint/no-explicit-any": 2,
+    "@typescript-eslint/no-explicit-any": ["off"],
   },
 };
