@@ -1,11 +1,20 @@
 <!--
  * @Author: kingford
  * @Date: 2021-11-23 14:34:34
- * @LastEditTime: 2021-11-23 16:31:05
+ * @LastEditTime: 2021-11-25 20:27:09
 -->
 <template>
-  <router-view />
-  <div id="frame"></div>
+  <div>
+    <router-link to="/vue">vue</router-link>
+  </div>
+  <div><router-link to="/react">react</router-link></div>
+  <div><router-link to="/react/list">react list</router-link></div>
+
+  <p>name:{{ $route }}</p>
+  <p>name:{{ $route.name }}</p>
+
+  <router-view v-show="$route.name" />
+  <div v-show="!$route.name" id="frame"></div>
 </template>
 
 <style>
