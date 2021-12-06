@@ -1,8 +1,3 @@
-/*
- * @Author: kingford
- * @Date: 2021-11-23 17:15:04
- * @LastEditTime: 2021-12-06 15:25:35
- */
 const path = require("path");
 
 module.exports = {

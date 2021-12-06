@@ -25,7 +25,8 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     "types/**/*.ts",
-    "types/**/*.d.ts"
+    "types/**/*.d.ts",
+    "src/public-path.js"
   ],
   "exclude": [
     "node_modules"

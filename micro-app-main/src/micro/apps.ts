@@ -1,12 +1,12 @@
 /*
  * @Author: kingford
  * @Date: 2021-11-23 14:42:52
- * @LastEditTime: 2021-11-23 20:55:17
+ * @LastEditTime: 2021-12-06 16:36:35
  */
 import config from "@/config";
 
 console.log("app.config:", config);
-const { REACT_MICRO_APP, VUE_MICRO_APP } = config;
+const { REACT_MICRO_APP, VUE_MICRO_APP, VUE3_MICRO_APP } = config;
 
 const apps = [
   /**
@@ -26,6 +26,12 @@ const apps = [
     entry: VUE_MICRO_APP,
     container: "#frame",
     activeRule: "/vue",
+  },
+  {
+    name: "Vue3MicroApp",
+    entry: VUE3_MICRO_APP,
+    container: "#frame",
+    activeRule: "/vue3",
   },
 ];
 
