@@ -1,4 +1,4 @@
-# w5-vue3
+# micro-app-main
 
 ## Project setup
 ```
