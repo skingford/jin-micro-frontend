@@ -1,7 +1,7 @@
 /*
  * @Author: kingford
  * @Date: 2021-12-06 16:47:05
- * @LastEditTime: 2021-12-06 20:12:52
+ * @LastEditTime: 2021-12-07 09:10:34
  */
 import { createApp } from "vue";
 import App from "./App.vue";
@@ -13,11 +13,16 @@ import { createRouter, createWebHistory } from "vue-router";
 import store from "./store";
 import "./public-path";
 
-const app = createApp(App);
+// 应用挂载,注意卸载时要清空应用否则会出现多次挂载，导致$router出错
+let app: any = null;
+let router: any = null;
 
 function render(props: any) {
   const { container } = props;
-  const router = createRouter({
+
+  app = createApp(App);
+
+  router = createRouter({
     history: createWebHistory(
       (window as any).__POWERED_BY_QIANKUN__ ? "/vue3" : "/"
     ),
@@ -56,4 +61,6 @@ export async function mount(props: any) {
 export async function unmount() {
   console.log("vue3 unmount");
   app.unmount();
+  app = null;
+  router = null;
 }
