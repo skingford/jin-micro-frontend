@@ -1,7 +1,7 @@
 /*
  * @Author: kingford
  * @Date: 2021-12-06 19:22:55
- * @LastEditTime: 2021-12-06 19:53:56
+ * @LastEditTime: 2021-12-08 09:14:32
  */
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
@@ -19,5 +19,8 @@ export default defineConfig({
   server: {
     port: 10400,
     open: false,
+    hmr: {
+      clientPort: 9999,
+    },
   },
 });
