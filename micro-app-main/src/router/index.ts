@@ -1,7 +1,7 @@
 /*
  * @Author: kingford
  * @Date: 2021-11-23 14:34:34
- * @LastEditTime: 2021-12-07 20:31:24
+ * @LastEditTime: 2021-12-08 11:45:47
  */
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import Home from "../views/Home.vue";
@@ -9,8 +9,16 @@ import Home from "../views/Home.vue";
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
+    name: "Layout",
+    component: () => import("@/layout/index.vue"),
+    redirect: "/home",
+    children: [
+      {
+        path: "home",
+        name: "LayoutHome",
+        component: () => import("@/views/Home.vue"),
+      },
+    ],
   },
   {
     path: "/login",

@@ -1,19 +1,10 @@
 <!--
  * @Author: kingford
  * @Date: 2021-11-23 14:34:34
- * @LastEditTime: 2021-12-07 11:49:25
+ * @LastEditTime: 2021-12-08 11:42:56
 -->
 <template>
-  <div>
-    <router-link to="/vue">vue</router-link> <br />
-    <router-link to="/vue3">vue3</router-link> <br />
-    <router-link to="/vite-vue">vite-vue</router-link>
-  </div>
-  <div><router-link to="/react">react</router-link></div>
-  <div><router-link to="/react/list">react list</router-link></div>
-  <n-button>naive-ui</n-button>
   <router-view />
-
   <section id="micro-content"></section>
 </template>
 <script lang="ts">
