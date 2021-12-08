@@ -1,7 +1,9 @@
+const { off } = require("process");
+
 /*
  * @Author: kingford
  * @Date: 2021-11-23 14:34:34
- * @LastEditTime: 2021-12-07 20:27:25
+ * @LastEditTime: 2021-12-08 14:18:16
  */
 module.exports = {
   root: true,
@@ -24,5 +26,6 @@ module.exports = {
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
     "@typescript-eslint/no-explicit-any": ["off"],
     "vue/multi-word-component-names": "off",
+    "@typescript-eslint/no-unnecessary-type-constraint": "off",
   },
 };
